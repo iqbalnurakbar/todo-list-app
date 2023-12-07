@@ -17,7 +17,7 @@ const TodoCard = ({
 }) => {
   return (
     <>
-      <div className="m-4 mb-10 flex flex-col rounded-lg border shadow-md w-96 overflow-auto">
+      <div className="m-4 mb-10 flex w-96 flex-col overflow-auto rounded-lg border shadow-md">
         <TodoCardHead title={title} createdAt={createdAt} />
         <TodoCardBody body={body} />
         <TodoCardButton

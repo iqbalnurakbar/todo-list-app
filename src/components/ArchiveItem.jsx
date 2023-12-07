@@ -1,13 +1,15 @@
 import React from "react";
 import TodoCard from "./TodoCard";
-
 import { showFormattedDate } from "../utils";
+
 const ArchiveItem = ({ data, handleActive, handleDelete }) => {
   return (
     <div>
       <h1 className="px-2 text-2xl font-bold">Catatan Arsip</h1>
       <div className="mt-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-        {data > 0 ? (
+        {data.length === 0 ? (
+          <p className="px-2">Data tidak ditemukan!</p>
+        ) : (
           data.map((item) => (
             <div className="flex justify-center" key={item.id}>
               <TodoCard
@@ -22,8 +24,6 @@ const ArchiveItem = ({ data, handleActive, handleDelete }) => {
               />
             </div>
           ))
-        ) : (
-          <p className="px-2">Data tidak ditemukan!</p>
         )}
       </div>
     </div>

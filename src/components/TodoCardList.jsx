@@ -27,7 +27,7 @@ const TodoCardList = () => {
       id: allData.length + 1,
       title,
       body,
-      createdAt: new Date(),
+      createdAt: new Date().toISOString(),
       archived: false,
     };
     setAllData((prevData) => [...prevData, newData]);
@@ -56,8 +56,8 @@ const TodoCardList = () => {
         item.title.toLowerCase().includes(lowerCaseData) ||
         item.body.toLowerCase().includes(lowerCaseData),
     );
-    if(filteredData <=0) alert('Data tidak ditemukan!')
-    setAllData(filteredData)
+    if (filteredData <= 0) alert("Data tidak ditemukan!");
+    setAllData(filteredData);
   };
 
   return (
@@ -69,7 +69,7 @@ const TodoCardList = () => {
         setBody={setBody}
         handleAddTodo={handleAddTodo}
       />
-      <SearchItem handleSearch = {handleSearch} />
+      <SearchItem handleSearch={handleSearch} />
       <ActiveItem
         data={activeData}
         handleArchive={handleArchive}

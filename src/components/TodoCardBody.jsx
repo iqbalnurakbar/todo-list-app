@@ -1,6 +1,6 @@
 import React from "react";
 
-const TodoCardBody = ({body}) => {
+const TodoCardBody = ({ body }) => {
   return <div className="px-2 pb-2 text-justify">{body}</div>;
 };
 

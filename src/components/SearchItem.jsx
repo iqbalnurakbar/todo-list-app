@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 
 const SearchItem = ({ handleSearch }) => {
+  //deklarasi state
   const [searchData, setSearchData] = useState("");
 
+  //deklarasi handle
   const handleChange = (e) => {
     setSearchData(e.target.value);
   };
@@ -21,7 +23,7 @@ const SearchItem = ({ handleSearch }) => {
     <>
       <div>
         <h1 className="px-2 text-2xl font-bold">Cari Catatan</h1>
-        <div className="mx-auto mt-2 flex items-center justify-center gap-2 mb-4">
+        <div className="mx-auto mb-4 mt-2 flex items-center justify-center gap-2">
           <input
             type="text"
             id="search"
