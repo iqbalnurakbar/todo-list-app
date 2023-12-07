@@ -56,6 +56,7 @@ const TodoCardList = () => {
         item.title.toLowerCase().includes(lowerCaseData) ||
         item.body.toLowerCase().includes(lowerCaseData),
     );
+    if(filteredData <=0) alert('Data tidak ditemukan!')
     setAllData(filteredData)
   };
 

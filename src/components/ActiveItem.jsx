@@ -7,7 +7,7 @@ const ActiveItem = ({ data, handleArchive, handleDelete }) => {
     <div>
       <h1 className="px-2 text-2xl font-bold">Catatan Aktif</h1>
       <div className="mx-auto mt-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-        {data.map((item) => (
+        {data>0? data.map((item) => (
           <div className="flex justify-center" key={item.id}>
             <TodoCard
               id={item.id}
@@ -20,7 +20,7 @@ const ActiveItem = ({ data, handleArchive, handleDelete }) => {
               button2="Hapus"
             />
           </div>
-        ))}
+        )): <p className="px-2">Data tidak ditemukan!</p> }
       </div>
     </div>
   );
