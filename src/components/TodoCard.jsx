@@ -4,11 +4,9 @@ import TodoCardHead from "./TodoCardHead";
 import TodoCardBody from "./TodoCardBody";
 
 const TodoCard = ({
-  data,
   title,
   body,
   createdAt,
-  id,
   handleArchive,
   handleDelete,
   handleActive,
@@ -21,8 +19,6 @@ const TodoCard = ({
         <TodoCardHead title={title} createdAt={createdAt} />
         <TodoCardBody body={body} />
         <TodoCardButton
-          id={id}
-          data={data}
           handleArchive={handleArchive}
           handleDelete={handleDelete}
           handleActive={handleActive}

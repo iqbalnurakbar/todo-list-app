@@ -10,7 +10,7 @@ const InputItem = ({ title, body, setTitle, setBody, handleAddTodo }) => {
       setTitle(inputValue);
     }
   };
-  
+
   const remainingCharacters = maxCharacterCount - title.length;
 
   return (

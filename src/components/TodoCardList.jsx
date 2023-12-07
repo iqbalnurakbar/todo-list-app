@@ -51,7 +51,7 @@ const TodoCardList = () => {
 
   const handleSearch = (searchData) => {
     const lowerCaseData = searchData.toLowerCase();
-    const filteredData = initialData.filter(
+    const filteredData = allData.filter(
       (item) =>
         item.title.toLowerCase().includes(lowerCaseData) ||
         item.body.toLowerCase().includes(lowerCaseData),
